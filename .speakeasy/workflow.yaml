@@ -11,6 +11,9 @@ targets:
     authelete-pro:
         target: typescript
         source: authelete pro-OAS
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas-typescript-code-samples
