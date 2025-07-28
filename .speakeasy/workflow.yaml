@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     authelete pro-OAS:
         inputs:
-            - location: registry.speakeasyapi.dev/vartana/qwerty/authlete-api-explorer:main
+            - location: ./specs/spec1.json
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas
