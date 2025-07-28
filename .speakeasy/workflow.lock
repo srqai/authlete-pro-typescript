@@ -1,0 +1,36 @@
+speakeasyVersion: 1.592.0
+sources:
+    authelete pro-OAS:
+        sourceNamespace: authlete-api-explorer
+        sourceRevisionDigest: sha256:97b2eff2f43ce14276d28efc41ec5de8034cde61db8445f12b626e4dc88ea40e
+        sourceBlobDigest: sha256:81cfc2e66c21c8554e77c28114e76e9b348f43af7e680245f78786f373790761
+        tags:
+            - latest
+targets:
+    authelete-pro:
+        source: authelete pro-OAS
+        sourceNamespace: authlete-api-explorer
+        sourceRevisionDigest: sha256:97b2eff2f43ce14276d28efc41ec5de8034cde61db8445f12b626e4dc88ea40e
+        sourceBlobDigest: sha256:81cfc2e66c21c8554e77c28114e76e9b348f43af7e680245f78786f373790761
+        codeSamplesNamespace: authelete-pro-oas-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:2f43ec0bda382dee89b11cadf201ca5fb5dd178bb97aab4506e8bd095322971e
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        authelete pro-OAS:
+            inputs:
+                - location: registry.speakeasyapi.dev/vartana/qwerty/authlete-api-explorer:main
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas
+    targets:
+        authelete-pro:
+            target: typescript
+            source: authelete pro-OAS
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false

@@ -1,0 +1,19 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    authelete pro-OAS:
+        inputs:
+            - location: registry.speakeasyapi.dev/vartana/qwerty/authlete-api-explorer:main
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas
+targets:
+    authelete-pro:
+        target: typescript
+        source: authelete pro-OAS
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/vartana/qwerty/authelete-pro-oas-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false
